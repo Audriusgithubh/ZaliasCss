@@ -1,0 +1,64 @@
+body {
+    color:black;
+    font-family: Chalkduster, fantasy;
+    text-align: center;
+}
+#content {
+    display: grid;
+    margin: 15px;
+    /**grid-template-columns:20% 30% 20% 30%;**/
+    /**grid-template-columns: 1fr 2fr 1fr;*/
+    grid-template-columns: repeat(6,1fr);
+    grid-template-rows: repeat(4, minmax(180px, auto));
+    /**grid-auto-rows:minmax(200px, auto);**/
+    grid-column-gap: 5px;
+    grid-row-gap: 5px;
+
+}
+#content div {
+    padding: 30px;
+}
+#content div:nth-child(even){
+}
+.Header {
+    /**grid-column-start:1;
+    grid-column-end:3;**/
+    grid-column: 1/7;
+    background-color: #ff6699;
+}
+.Nav {
+    grid-row: 2/4;
+    background-color: #9999ff;
+}
+.Article {
+    grid-row: 2/6;
+    grid-column: 2/7;
+    background-color: #66ffd9;
+    font-family: Verdana, sans-serif;
+
+
+}
+.Ads {
+    grid-row: 4/7;
+    background-color:#d2ff4d;
+}
+.Footer {
+    grid-row: 6/7;
+    grid-column: 2/7;
+    background-color: #0000e6;
+    height: 100px;
+}
+
+.inner_footer .logo img{
+    width:100px;
+    height: 50px;
+
+}
+.navlink {
+    float: left;
+    font-family:Snell Roundhand, cursive ;
+
+}
+.kontktai .navlink a{
+    color: white;
+}
